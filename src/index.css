@@ -1,0 +1,160 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: -apple-system, Comfortaa, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  padding: 15px 0 0;
+  margin: 10px;
+  background-color: #d5d8db;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+input,
+select {
+  font: Comfortaa;
+  font-size: 13px;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+#add_btn {
+  font-family: -apple-system, Comfortaa, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+label {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Table BSU */
+
+#table_bsu {
+  display: flex;
+  vertical-align: middle;
+}
+
+#table_bsu_label {
+  font-size: 17pt;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto 0 0;
+}
+
+.edit_btn {
+  border: 1px solid #ced4da;
+  cursor: pointer;
+}
+
+#settings_img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Input */
+
+#edit_panel {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#input_block_name {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.input_block_wrap {
+  text-align: left;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.input_block_name_child {
+  font-weight: bold;
+}
+
+.input_block {
+  padding-top: 5px;
+}
+
+#input_name {
+  width: 400px;
+}
+
+.choose_dep {
+  cursor: pointer;
+}
+
+.input_pos {
+  width: 60px;
+}
+
+#change_dep_btn {
+  width: 250px;
+}
+
+#add_btn {
+  width: 200px;
+}
+
+#del_btn {
+  width: 180px;
+}
+
+#change_dep_btn {
+  width: 180px;
+}
+
+/* Departments */
+
+.dep {
+  padding: 5px;
+}
+
+.dep_name {
+  font-weight: bold;
+}
+
+.dep_btns_wrap {
+  padding-top: 5px;
+  line-height: 2.5;
+}
+
+.emp_btn_wrap {
+  padding-right: 10px;
+}
+
+.emp_btn {
+  color: white;
+  width: 190px;
+  cursor: pointer;
+}
+
+/* Confirm deleting */
+
+.confirm_btn {
+  width: 60px;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+}
+
+dialog{
+  position: absolute;
+  top: 40%;
+}
