@@ -26,7 +26,7 @@ const createWindow = () => {
     mainWindow.show()
     mainWindow.loadFile(path.join(__dirname, 'index.html'))
     // Open the DevTools.
-    mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
 };
 
 app.on('ready', createWindow)
@@ -42,7 +42,6 @@ ipcMain.on("saveData", (event, value, config) => {
     const filePath = path.join(__dirname, 'output.json')
     const today = new Date();
     const now = today.toLocaleString()
-    //const data = value + " — " + `Время прибытия: ${now}` + "\n"
     const json = {
         name: value,
         time: `${config}: ${now}`
@@ -61,6 +60,10 @@ ipcMain.on("saveData", (event, value, config) => {
         console.log(err)
         console.log(data.toString())
     })
+})
+
+ipcMain.on("exit", ()  => {
+    app.quit()
 })
 
 app.on('activate', () => {

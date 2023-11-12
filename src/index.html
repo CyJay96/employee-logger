@@ -1,100 +1,176 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8" />
     <title>Табло прибытия БГУ</title>
     <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-<div id="table_bsu">
-    <label id="table_bsu_label">Табло прибытия личного состава военного факультета БГУ</label>
-    <span id=edit_btn>
-        <img id="settings_img" src="img/settings.png" alt="Панель управления" />
-    </span>
-</div>
+  </head>
+  <body>
+    <div id="table_bsu">
+      <div id="title_div"></div>
+      <div>
+        <span id="edit_btn">
+          <img
+            class="edit_panel_img"
+            id="settings_img"
+            src="img/settings.png"
+            alt="Панель управления"
+          />
+        </span>
 
-<div id="edit_panel">
-    <label id="input_block_name">Панель управления</label>
+        <span id="exit_btn">
+          <img
+            class="edit_panel_img"
+            id="exit_img"
+            src="img/exit.png"
+            alt="Выход"
+          />
+        </span>
+      </div>
+    </div>
 
-    <div class="input_block_wrap">
+    <div id="edit_panel">
+      <label id="input_block_name">Панель управления</label>
+
+      <div class="input_block_wrap">
+        <label class="input_block_name_child">Изменение заголовка</label>
+
+        <div class="input_block" id="block_with_wall">
+          <div>
+            <label>Введите новый заголовок:</label>
+            <input type="text" id="input_title" placeholder="Новый заголовок" />
+            <input
+              class="edit_btn"
+              id="change_title_btn"
+              type="button"
+              value="Изменить заголовок"
+            />
+          </div>
+
+          <input
+            class="edit_btn"
+            id="change_wall"
+            type="button"
+            value="Изменить тему"
+          />
+        </div>
+      </div>
+
+      <div class="input_block_wrap">
         <label class="input_block_name_child">Добавление сотрудников</label>
 
         <div class="input_block">
-            <label>Введите ФИО сотрудника:</label>
-            <input type="text" id="input_name" placeholder="ФИО" />
+          <label>Введите ФИО сотрудника:</label>
+          <input type="text" id="input_name" placeholder="ФИО" />
         </div>
 
         <div class="input_block">
-            <label>Выберете кафедру для добавления:</label>
-            <span class="choose_dep" id="add_select_div"></span>
+          <label>Выберете кафедру для добавления:</label>
+          <span class="choose_dep" id="add_select_div"></span>
         </div>
 
         <div class="input_block">
-            <label>Под каким номером вы хотите добавить сотрудника?</label>
-            <input min="1" type="number" class="input_pos" id="input_position" placeholder="№" />
-            <input class="edit_btn" id="add_btn" type="button" value="Добавить сотрудника" />
+          <label>Под каким номером вы хотите добавить сотрудника?</label>
+          <input
+            min="1"
+            type="number"
+            class="input_pos"
+            id="input_position"
+            placeholder="№"
+          />
+          <input
+            class="edit_btn"
+            id="add_btn"
+            type="button"
+            value="Добавить сотрудника"
+          />
         </div>
-    </div>
+      </div>
 
-    <div class="input_block_wrap">
+      <div class="input_block_wrap">
         <label class="input_block_name_child">Удаление сотрудников</label>
 
         <div class="input_block">
-            <label>В какой кафедре вы хотите удалить сотрудника?</label>
-            <span class="choose_dep" id="del_select_div"></span>
+          <label>В какой кафедре вы хотите удалить сотрудника?</label>
+          <span class="choose_dep" id="del_select_div"></span>
         </div>
 
         <div class="input_block">
-            <label>Под каким номером вы хотите удалить сотрудника?</label>
-            <input min="1" type="number" class="input_pos" id="input_position_del" placeholder="№" />
-            <input class="edit_btn" id="del_btn" type="button" value="Удалить сотрудника" />
+          <label>Под каким номером вы хотите удалить сотрудника?</label>
+          <input
+            min="1"
+            type="number"
+            class="input_pos"
+            id="input_position_del"
+            placeholder="№"
+          />
+          <input
+            class="edit_btn"
+            id="del_btn"
+            type="button"
+            value="Удалить сотрудника"
+          />
         </div>
-    </div>
+      </div>
 
-    <div class="input_block_wrap">
+      <div class="input_block_wrap">
         <label class="input_block_name_child">Редактирование кафедр</label>
 
         <div class="input_block">
-            <label>Выберете кафедру для смены названия</label>
-            <span class="choose_dep" id="change_select_div"></span>
-            <label>Введите новое название кафедры</label>
-            <input type="text" id="change_dep_input" placeholder="Название кафедры" />
-            <input class="edit_btn" id="change_dep_btn" type="button" value="Сменить название" />
+          <label>Выберете кафедру для смены названия</label>
+          <span class="choose_dep" id="change_select_div"></span>
+          <label>Введите новое название кафедры</label>
+          <input
+            type="text"
+            id="change_dep_input"
+            placeholder="Название кафедры"
+          />
+          <input
+            class="edit_btn"
+            id="change_dep_btn"
+            type="button"
+            value="Изменить название"
+          />
         </div>
+      </div>
     </div>
-</div>
 
-<div class="dep">
-    <div class="dep_name" id="dep_name_1"></div>
-    <div class="dep_btns_wrap" id="dep_1"></div>
-</div>
+    <div class="dep">
+      <div class="dep_name" id="dep_name_1"></div>
+      <div class="dep_btns_wrap" id="dep_1"></div>
+    </div>
 
-<div class="dep">
-    <div class="dep_name" id="dep_name_2"></div>
-    <div class="dep_btns_wrap" id="dep_2"></div>
-</div>
+    <div class="dep">
+      <div class="dep_name" id="dep_name_2"></div>
+      <div class="dep_btns_wrap" id="dep_2"></div>
+    </div>
 
-<div class="dep">
-    <div class="dep_name" id="dep_name_3"></div>
-    <div class="dep_btns_wrap" id="dep_3"></div>
-</div>
+    <div class="dep">
+      <div class="dep_name" id="dep_name_3"></div>
+      <div class="dep_btns_wrap" id="dep_3"></div>
+    </div>
 
-<div class="dep">
-    <div class="dep_name" id="dep_name_4"></div>
-    <div class="dep_btns_wrap" id="dep_4"></div>
-</div>
+    <div class="dep">
+      <div class="dep_name" id="dep_name_4"></div>
+      <div class="dep_btns_wrap" id="dep_4"></div>
+    </div>
 
-<div class="dep">
-    <div class="dep_name" id="dep_name_5"></div>
-    <div class="dep_btns_wrap" id="dep_5"></div>
-</div>
+    <div class="dep">
+      <div class="dep_name" id="dep_name_5"></div>
+      <div class="dep_btns_wrap" id="dep_5"></div>
+    </div>
 
-<dialog>
-    <p>Вы действительно хотите удалить сотрудника?</p>
-    <input id="confirm_btn" class="confirm_btn" type="button" value="Да" />
-    <input id="close_btn" class="confirm_btn" type="button" value="Нет" />
-</dialog>
+    <div class="dep">
+      <div class="dep_name" id="dep_name_6"></div>
+      <div class="dep_btns_wrap" id="dep_6"></div>
+    </div>
 
-<script src="main.js"></script>
-</body>
+    <dialog>
+      <p>Вы действительно хотите удалить сотрудника?</p>
+      <input id="confirm_btn" class="confirm_btn" type="button" value="Да" />
+      <input id="close_btn" class="confirm_btn" type="button" value="Нет" />
+    </dialog>
+
+    <script src="main.js"></script>
+  </body>
 </html>

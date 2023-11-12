@@ -1,3 +1,9 @@
+# Build for Windows x32: npm run package -- --platform=win32 --arch=ia32
+
+# npm install --save-dev @electron-forge/cli
+# npx electron-forge import
+# npm run make -- --arch=ia32
+
 # Logs
 logs
 *.log

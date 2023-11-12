@@ -29,11 +29,6 @@ select {
   border-radius: 5px;
 }
 
-#add_btn {
-  font-family: -apple-system, Comfortaa, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
-}
-
 label {
   padding-left: 10px;
   padding-right: 10px;
@@ -41,9 +36,11 @@ label {
 
 /* Table BSU */
 
-#table_bsu {
+#table_bsu,
+#block_with_wall {
   display: flex;
   vertical-align: middle;
+  justify-content: space-between;
 }
 
 #table_bsu_label {
@@ -59,7 +56,12 @@ label {
   cursor: pointer;
 }
 
-#settings_img {
+#exit_btn {
+  vertical-align: center;
+  width: 60px;
+}
+
+.edit_panel_img {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -93,6 +95,10 @@ label {
   padding-top: 5px;
 }
 
+#input_title {
+  width: 380px;
+}
+
 #input_name {
   width: 400px;
 }
@@ -105,8 +111,13 @@ label {
   width: 60px;
 }
 
-#change_dep_btn {
-  width: 250px;
+.edit_btn {
+  font-family: -apple-system, Comfortaa, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif;
+}
+
+#change_title_btn {
+  width: 180px;
 }
 
 #add_btn {

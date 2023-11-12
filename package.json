@@ -1,8 +1,8 @@
 {
-  "name": "app",
-  "productName": "app",
-  "version": "1.0.1",
-  "description": "My Electron application description",
+  "name": "employee-logger",
+  "productName": "employee-logger",
+  "version": "1.0.2",
+  "description": "Scoreboard of arrival of personnel of the military faculty of BSU",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -13,8 +13,8 @@
   },
   "keywords": [],
   "author": {
-    "name": "konstantin_voytko",
-    "email": "konstantin201586@gmail.com"
+    "name": "CyJay96, kovalenkoko, dEISOT",
+    "email": "konstantin201586@gmail.com, kiril.kovalenko.79@outlook.com, danielstudentbsu@gmail.com"
   },
   "license": "MIT",
   "config": {
@@ -45,17 +45,21 @@
     }
   },
   "dependencies": {
-    "docx": "^7.7.0",
-    "docxtemplater": "^3.39.2",
+    "docxtemplater": "^3.40.2",
     "electron-squirrel-startup": "^1.0.0",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.6.0",
+    "officegen": "^0.6.5",
+    "pizzip": "^3.1.4"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.66",
-    "@electron-forge/maker-deb": "^6.0.0-beta.66",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.66",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.66",
-    "@electron-forge/maker-zip": "^6.0.0-beta.66",
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
     "electron": "21.0.1",
     "electron-wix-msi": "^4.0.0"
   }
